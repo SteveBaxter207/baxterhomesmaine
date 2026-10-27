@@ -289,7 +289,7 @@ footer .lic{text-align:right}
       <p>A few quick questions so we can point you to the right home. No pressure, and we'll reach out within one business day.</p>
     </div>
     <div class="find-wrap">
-      <form class="form" id="contact-form">
+      <form class="form" id="contact-form" action="https://formspree.io/f/mqppqllb" method="POST">
                 <div class="grid2">
           <div class="row"><label for="c-name">Name</label><input id="c-name" name="name" required autocomplete="name"></div>
           <div class="row"><label for="c-phone">Phone</label><input id="c-phone" name="phone" type="tel" required autocomplete="tel"></div>
@@ -324,6 +324,7 @@ footer .lic{text-align:right}
           </div>
         </fieldset>
         <div class="row"><label for="c-msg">Anything else we should know?</label><textarea id="c-msg" name="msg" rows="3" placeholder="Must-haves, questions, the lot you're looking at..."></textarea></div>
+        <input type="hidden" name="_subject" value="New Find Your Home lead from baxterhomesmaine.com"><input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
         <button class="btn btn-primary" type="submit">Send</button>
         <div class="note" id="c-note">Thanks! We got your info and will reach out shortly.</div>
         <small>Submitting does not affect your credit.</small>
@@ -358,8 +359,11 @@ footer .lic{text-align:right}
 })();
 document.getElementById('contact-form').addEventListener('submit',function(e){
   e.preventDefault();
-  document.getElementById('c-note').classList.add('show');
-  this.querySelector('button').disabled=true;
+  var form=this,btn=form.querySelector('button[type="submit"]'),note=document.getElementById('c-note');
+  btn.disabled=true;btn.textContent='Sending...';
+  fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+    .then(function(r){if(!r.ok)throw new Error();note.textContent='Thanks! We got your info and will reach out shortly.';note.classList.add('show');form.reset();btn.textContent='Sent';})
+    .catch(function(){note.textContent='Something went wrong sending that. Please call or text us at (207) 531-5435.';note.classList.add('show');btn.disabled=false;btn.textContent='Send';});
 });
 </script>
 
