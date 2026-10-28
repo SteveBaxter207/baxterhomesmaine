@@ -295,36 +295,36 @@ footer .lic{text-align:right}
           <div class="row"><label for="c-phone">Phone</label><input id="c-phone" name="phone" type="tel" required autocomplete="tel"></div>
         </div>
         <div class="row"><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email"></div>
-        <div class="row"><label for="c-town">Where are you looking to put the home? (town)</label><input id="c-town" name="town" placeholder="Lewiston, Auburn, Sabattus..."></div>
+        <div class="row"><label for="c-town">Where are you looking to put the home? (town)</label><input id="c-town" name="Land location" placeholder="Lewiston, Auburn, Sabattus..."></div>
         <fieldset class="row"><legend>What type of home?</legend>
           <div class="chips">
-            <label><input type="radio" name="type" value="Single wide"><span>Single wide</span></label>
-            <label><input type="radio" name="type" value="Double wide"><span>Double wide</span></label>
-            <label><input type="radio" name="type" value="Modular"><span>Modular</span></label>
-            <label><input type="radio" name="type" value="Not sure yet"><span>Not sure yet</span></label>
+            <label><input type="radio" name="Home type" value="Single wide"><span>Single wide</span></label>
+            <label><input type="radio" name="Home type" value="Double wide"><span>Double wide</span></label>
+            <label><input type="radio" name="Home type" value="Modular"><span>Modular</span></label>
+            <label><input type="radio" name="Home type" value="Not sure yet"><span>Not sure yet</span></label>
           </div>
         </fieldset>
         <fieldset class="row"><legend>Do you already own land?</legend>
           <div class="chips">
-            <label><input type="radio" name="land" value="Yes, I own land"><span>Yes</span></label>
-            <label><input type="radio" name="land" value="No, I need land"><span>No, I need land</span></label>
-            <label><input type="radio" name="land" value="Lot in a park"><span>Lot in a park</span></label>
+            <label><input type="radio" name="Has land" value="Yes, I own land"><span>Yes</span></label>
+            <label><input type="radio" name="Has land" value="No, I need land"><span>No, I need land</span></label>
+            <label><input type="radio" name="Has land" value="Lot in a park"><span>Lot in a park</span></label>
           </div>
         </fieldset>
         <div class="grid2">
-          <div class="row"><label for="c-beds">Bedrooms</label><select id="c-beds" name="beds"><option value="">No preference</option><option>2</option><option>3</option><option>4+</option></select></div>
-          <div class="row"><label for="c-budget">Budget (home only, or land + home)</label><select id="c-budget" name="budget"><option value="">Not sure yet</option><option>Under $100k</option><option>$100k to $150k</option><option>$150k to $200k</option><option>$200k to $300k</option><option>$300k+</option></select></div>
+          <div class="row"><label for="c-beds">Bedrooms</label><select id="c-beds" name="Beds"><option value="">No preference</option><option>2</option><option>3</option><option value="4">4+</option></select></div>
+          <div class="row"><label for="c-budget">Budget (home only, or land + home)</label><select id="c-budget" name="Budget"><option value="">Not sure yet</option><option>Under $100k</option><option>$100k to $150k</option><option>$150k to $200k</option><option>$200k to $300k</option><option>$300k+</option></select></div>
         </div>
-        <div class="row"><label for="c-when">When are you hoping to move in?</label><select id="c-when" name="when"><option value="">Not sure yet</option><option>As soon as possible</option><option>3 to 6 months</option><option>6 to 12 months</option><option>Just looking right now</option></select></div>
+        <div class="row"><label for="c-when">When are you hoping to move in?</label><select id="c-when" name="Timeline"><option value="">Not sure yet</option><option>As soon as possible</option><option>3 to 6 months</option><option>6 to 12 months</option><option>Just looking right now</option></select></div>
         <fieldset class="row"><legend>Financing</legend>
           <div class="chips">
-            <label><input type="radio" name="fin" value="Need financing"><span>I'll need financing</span></label>
-            <label><input type="radio" name="fin" value="Pre-approved"><span>Already pre-approved</span></label>
-            <label><input type="radio" name="fin" value="Paying cash"><span>Paying cash</span></label>
+            <label><input type="radio" name="Financing" value="Need financing"><span>I'll need financing</span></label>
+            <label><input type="radio" name="Financing" value="Pre-approved"><span>Already pre-approved</span></label>
+            <label><input type="radio" name="Financing" value="Paying cash"><span>Paying cash</span></label>
           </div>
         </fieldset>
-        <div class="row"><label for="c-msg">Anything else we should know?</label><textarea id="c-msg" name="msg" rows="3" placeholder="Must-haves, questions, the lot you're looking at..."></textarea></div>
-        <input type="hidden" name="_subject" value="New Find Your Home lead from baxterhomesmaine.com"><input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="row"><label for="c-msg">Anything else we should know?</label><textarea id="c-msg" name="Message from Web Form" rows="3" placeholder="Must-haves, questions, the lot you're looking at..."></textarea></div>
+        <input type="hidden" name="Lead source" value="Website"><input type="hidden" name="Contact status" value="Not contacted"><input type="hidden" name="_subject" value="New Find Your Home lead from baxterhomesmaine.com"><input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
         <button class="btn btn-primary" type="submit">Send</button>
         <div class="note" id="c-note">Thanks! We got your info and will reach out shortly.</div>
         <small>Submitting does not affect your credit.</small>
